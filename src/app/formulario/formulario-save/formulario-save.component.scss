@@ -1,0 +1,37 @@
+table{
+    width: 100%;
+}
+.example-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+}
+.cliente-form {
+    
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+
+    padding: 80px;
+    text-align: left;
+    margin: auto;
+    display: table;
+    
+  }
+  
+  .cliente-mid-width {
+    width: 50%;
+  }
+  .cliente-full-width {
+    width: 100%;
+  }
+  
+  td {
+    padding-right: 10px;
+  }
+
+  .mat-tittle {
+    font-size: 24px;
+    text-align: center;
+}

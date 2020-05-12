@@ -1,0 +1,29 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Proceso</h5>
+        </div>
+        <div class="card-body">
+          <div class="col-sm-12 col-lg-20">
+            <div class="form-group">
+              <form #companiaForm="ngForm">
+                <input matInput placeholder="Nombre" [(ngModel)]="proceso.nombre" #nombre type="text" name="nombre"
+                  id="nombre" class="form-control"><br>
+
+                <input matInput placeholder="Area" [(ngModel)]="proceso.areaId_Area" #nombre type="text"
+                  name="areaId_Area" id="areaId_Area" class="form-control" disabled=""><br>
+              </form>
+              <br>
+              <button mat-raised-button (click)="save()" class="btn btn-primary cliente-full-width"
+                color="primary">Registrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

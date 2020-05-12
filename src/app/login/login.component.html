@@ -1,0 +1,99 @@
+<img src="../../assets/img/ark1.jpg" alt="" class="imgAux">
+
+<div class="container">
+    <div class="cliente-form" *ngIf="!registerAux">
+        <div class="card" style="width: 22rem">
+            <div class="card-header">LOGIN</div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md 5 pr-3">
+                            <div class="input-group">
+                                <input [(ngModel)]="login.username" name="user" type="text" class="form-control"
+                                    placeholder="Username">
+                                <div class="input-group-append">
+                                    <span class="input-group-text"><i class="now-ui-icons users_single-02"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md 5 pr-3">
+                            <div class="input-group">
+                                <input [(ngModel)]="login.clave" name="clave" type="password" class="form-control"
+                                    placeholder="Password">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="now-ui-icons"><mat-icon>visibility_off</mat-icon></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row">
+                    <div class="col-sm-8">
+                        <button class="btn btn-primary btn-round col-md-12" (click)="doLogin()">Login</button>
+                    </div>
+                    <div class="col-sm-4 my-auto pr-9">
+                        <a (click)="registerOn()" class="float-right" style="cursor: pointer;">Registrate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cliente-form" *ngIf="registerAux">
+        <div class="card" style="width: 23rem">
+            <div class="card-header">REGISTRARSE
+                <a href="" class="float-right">Regresar</a>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="row">
+                        <div class="col-md 5 pr-3">
+                            <div class="form-group">
+                                <input type="text" name="nombre" [(ngModel)]="compania.nombre" class="form-control"
+                                    placeholder="Nombre compañia">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md 6 pr-3">
+                            <div class="form-group">
+                                <input type="text" name="compId" [(ngModel)]="compania.compId" class="form-control"
+                                    placeholder="NIT">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md 6 pr-3">
+                            <div class="form-group">
+                                <input type="text" name="email" [(ngModel)]="compania.email" class="form-control"
+                                    placeholder="E-mail">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md 6 pr-3">
+                            <div class="form-group">
+                                <input type="number" name="telefono" [(ngModel)]="compania.telefono" class="form-control"
+                                    placeholder="Telefono">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md 6 pr-3">
+                            <div class="form-group">
+                                <input type="text" name="direccion" [(ngModel)]="compania.direccion" class="form-control"
+                                    placeholder="Direccion">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <button class="btn btn-primary btn-round" (click)="register()">Registrarse</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

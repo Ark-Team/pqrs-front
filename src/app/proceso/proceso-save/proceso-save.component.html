@@ -1,0 +1,34 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Proceso</h5>
+        </div>
+        <div class="card-body">
+          <div class="col-sm-12 col-lg-20">
+            <div class="form-group">
+              <form #companiaForm="ngForm">
+                <input matInput placeholder="Nombre" [(ngModel)]="proceso.nombre" #nombre type="text" name="nombre"
+                  id="nombre" class="form-control"><br>
+                <mat-form-field class="cliente-full-width">
+                  <mat-label>Area</mat-label>
+                  <mat-select>
+                    <mat-option *ngFor="let area of areas" [value]="area.areaId" (click)="getIdSelected(area.areaId)">
+                      {{area.nombre}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </form>
+              <br>
+              <button mat-raised-button (click)="save()" class="btn btn-primary cliente-full-width"
+                color="primary">Registrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

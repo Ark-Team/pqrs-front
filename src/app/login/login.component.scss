@@ -1,0 +1,39 @@
+img{
+    min-width: 1024px;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: brightness(50%);
+}
+
+@media screen and (max-width: 1024px){
+    img{
+        left: 50%;
+        margin-left: -512px;
+    }
+}
+.cliente-form {
+    min-width: 150px;
+    max-width: 500px;     
+    width: 100%;      
+    padding: 80px;     
+    text-align: left;     
+    margin: auto;     
+    display: table;
+}      
+.cliente-mid-width {     
+    width: 50%;   
+}   
+.cliente-full-width {     
+    width: 100%;   
+}      
+td {     
+    padding-right: 10px;   
+}    
+.mat-tittle {     
+    font-size: 24px;     
+    text-align: center; 
+}

@@ -1,0 +1,64 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Usuario</h5>
+        </div>
+        <div class="card-body">
+          <div class="col-sm-12 col-lg-20">
+            <div class="form-group">
+              <form #companiaForm="ngForm">
+
+                <input matInput placeholder="Nombre" [(ngModel)]="usuario.nombre" #nombre type="text" name="nombre"
+                  id="nombre" class="form-control" /><br>
+
+                <input matInput placeholder="Id Tipo Usuario" [(ngModel)]="usuario.tusuId_TipoUsuario" #nombre
+                  type="text" name="tusuId_TipoUsuario" id="tusuId_TipoUsuario" class="form-control" disabled="" /><br>
+
+                <input matInput placeholder="Email" [(ngModel)]="usuario.email" #email type="text" name="email"
+                  id="email" class="form-control" /><br>
+
+                <table class="cliente-full-width" cellspacing="0">
+                  <tr>
+                    <td>
+                      <input matInput placeholder="Telefono" [(ngModel)]="usuario.telefono" #telefono type="text"
+                        name="telefono" id="telefono" class="form-control" />
+                    </td>
+                    <td>
+                      <input matInput placeholder="Identificacion" [(ngModel)]="usuario.identificacion" #direccion
+                        type="text" name="identificacion" id="identificacion" class="form-control" />
+                    </td>
+                  </tr>
+                </table>
+                <br>
+                <input matInput placeholder="User Name" [(ngModel)]="usuario.usuId" #nombre type="text" name="usuId"
+                  id="usuId" class="form-control" /><br>
+
+                <table class="cliente-full-width" cellspacing="0">
+                  <tr>
+                    <td>
+                      <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'"
+                        [(ngModel)]="usuario.clave" name="clave" id="clave" class="form-control">
+                    </td>
+                    <td>
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+              <br>
+              <button mat-raised-button (click)="update()" class="btn btn-primary cliente-full-width"
+                color="primary">Registrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

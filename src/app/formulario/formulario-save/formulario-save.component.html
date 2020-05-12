@@ -1,0 +1,40 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Formulario</h5>
+        </div>
+        <div class="card-body">
+          <mat-form-field class="cliente-full-width">
+            <input matInput placeholder="Nombre del formulario" [(ngModel)]="formulario.nombre" #nombre type="text"
+              name="nombre" id="nombre" />
+          </mat-form-field>
+          <table mat-table #table [dataSource]="dataSource">
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef> Nombre </th>
+              <td mat-cell *matCellDef="let atributo"> {{atributo.nombre}} </td>
+            </ng-container>
+            <ng-container matColumnDef="descripcion">
+              <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+              <td mat-cell *matCellDef="let atributo"> {{atributo.descripcion}} </td>
+            </ng-container>
+            <ng-container matColumnDef="select">
+              <th mat-header-cell *matHeaderCellDef>Check</th>
+              <td mat-cell *matCellDef="let atributo">
+                <mat-checkbox [(ngModel)]="atributo.checked" (click)="getIdSelected(atributo.atriId)"></mat-checkbox>
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColums"></tr>
+            <tr mat-row *matRowDef="let cliente; columns: displayedColums;"></tr>
+          </table>
+          <br>
+          <button mat-raised-button (click)="save()" class="btn btn-primary cliente-full-width"
+            color="primary">Registrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

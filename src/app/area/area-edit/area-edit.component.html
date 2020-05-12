@@ -1,0 +1,44 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Actualizar Area</h5>
+        </div>
+        <div class="card-body">
+          <div class="col-sm-12 col-lg-20">
+            <div class="form-group">
+              <form #companiaForm="ngForm">
+                <input matInput placeholder="Nombre" [(ngModel)]="area.nombre" #nombre type="text" name="nombre"
+                  id="nombre" class="form-control" />
+              </form>
+              <table class="cliente-full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-form-field class="cliente-full-width">
+                      <label>Fecha Creacion</label>
+                      <input type="text" class="form-control" disabled="" placeholder="Fecha Creacion"
+                        [(ngModel)]="area.fechaCreacion">
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field class="cliente-full-width">
+                      <label>Fecha Modificacion</label>
+                      <input type="text" class="form-control" disabled="" placeholder="Fecha Modificacion"
+                        [(ngModel)]="area.fechaModificacion">
+                    </mat-form-field>
+                  </td>
+                </tr>
+              </table>
+              <br>
+              <button mat-raised-button (click)="update()" class="btn btn-primary cliente-full-width"
+                color="primary">Actualizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
